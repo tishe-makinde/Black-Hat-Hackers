@@ -28,7 +28,7 @@ class WebScraper:
         """
         process = CrawlerProcess(settings={
             "LOG_LEVEL": "ERROR",  
-
+        })
         
         deferred = defer.Deferred()
 
