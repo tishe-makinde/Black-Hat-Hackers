@@ -1,4 +1,4 @@
-## Black Hat Hackers
+# Black Hat Hackers
 Created an app called "**Trustify**" that verifies the authenticity of a media article/post, given an image or url.
 
 ## Table of Contents
@@ -19,12 +19,12 @@ This web app is a group project built for Warwick's WHACK Hackathon. It helps us
 
 ## Team Members
 - **Tishe:** Backend Developer - [@tishe-makinde](https://github.com/tishe-makinde)
-- **Mikel:** Frontend Developer - []()
+- **Mikel:** Frontend Developer - [@mikelexcel](https://github.com/mikelexcel)
 - **Mofe:** Backend Developer - []()
 - **Oke:** Backend Developer - [@oke06](https://github.com/oke06)
 
 ## Tech Stack
-- **Frontend:** JavaScript, Html, CSS
+- **Frontend:** Dart, Flutter
 - **Backend:** Flask, Scrapy, Python
 - **Version Control:** Git, Github
 
@@ -41,11 +41,11 @@ This web app is a group project built for Warwick's WHACK Hackathon. It helps us
 
 ### Installation
 '''bash
-# Clone this repository
+### Clone this repository
 git clone "https://github.com/tishe-makinde/Black-Hat-Hackers.git"
 cd Black-Hat-Hunters
 
-# Install dependencies
+### Install dependencies
 pip install -r requirement.txt
 
 
