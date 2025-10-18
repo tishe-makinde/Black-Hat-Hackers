@@ -1,0 +1,4 @@
+enum VerifierType {
+  link,
+  image,
+}
