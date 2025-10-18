@@ -13,15 +13,15 @@ Created an app that verifies the authenticity of a social media post, given an i
 This web app is a group project built for Warwick's WHACK Hackathon. It helps users to determine accurate social media information with API's and web scraping tools.
 
 ## Team Members
-- **Tishe** 
-- **Mikel**
-- **Mofe**
-- **Oke**
+- **Tishe:** Backend Developer - [@tishe-makinde](https://github.com/tishe-makinde)
+- **Mikel:** Frontend Developer - []()
+- **Mofe:** Backend Developer - []()
+- **Oke:** Backend Developer - [@oke06](https://github.com/oke06)
 
 ## Tech Stack
 - **Frontend:** JavaScript, Html, CSS
-- **Backend: ** Flask, Scrapy, Python
-- **Version: ** Git, Github
+- **Backend:** Flask, Scrapy, Python
+- **Version Control:** Git, Github
 
 ## Features
 - 📝 Multi-Input Verification
@@ -30,5 +30,9 @@ This web app is a group project built for Warwick's WHACK Hackathon. It helps us
 - 🖼️ Image Verification and OCR
 
 # Getting Started
+
+1. Clone this repository
+2. Install dependencies
+
 
 # Usage
