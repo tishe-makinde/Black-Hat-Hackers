@@ -2,23 +2,27 @@ import numpy
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from google import genai
-from webScraper import WebScraper
+from webScraper import webScraper
 
 class linkCreditability:
     def __init__(self, link):
         self.link = link
+        self.scraper = webScraper(self.link)
 
     def formatContent(self):
         # use web scraper class to get content
-        webScraper = WebScraper()
-        result = webScraper.scrape("https://quotes.toscrape.com")
+        result = self.scraper.scrape()
         # format it so that 
-        print(result)
+        return result
+# errorMessage = "Make sure your link is valid"
+# webContent = []
+# try:
+#     userLink = input("Enter a link to check credibility: ")
+# except:
+#     print(errorMessage)
+#     userLink = input("Enter a link to check credibility: ")
 
 
-creditabilityScore = linkCreditability("https://quotes.toscrape.com")
-
-creditabilityScore.formatContent()
 
 
 # The client gets the API key from the environment variable `GEMINI_API_KEY`.
