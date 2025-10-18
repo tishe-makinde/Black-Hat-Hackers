@@ -1,4 +1,4 @@
-import numpy
-from sklearn.feature_extraction.text import TfidVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-from google import genai 
+pip install numpy
+pip install scikit-learn
+pip install -q -U google-genai
+pip install Scrapy
