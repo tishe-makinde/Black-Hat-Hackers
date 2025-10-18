@@ -1,6 +1,7 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
 from twisted.internet import defer
+import json
 
 
 class ArticleSpider(scrapy.Spider):
@@ -28,7 +29,7 @@ class WebScraper:
         """
         process = CrawlerProcess(settings={
             "LOG_LEVEL": "ERROR",  
-
+        })
         
         deferred = defer.Deferred()
 
@@ -44,5 +45,5 @@ class WebScraper:
             "description": response.css("meta[name='description']::attr(content)").get(),
         })
 
-        process.crawl(spider)
-        process.start()  
+        process.crawl(ArticleSpider)
+        process.start() 
