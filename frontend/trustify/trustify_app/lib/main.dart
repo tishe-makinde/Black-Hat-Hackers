@@ -1,11 +1,20 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trustify_app/core/constants/app_constants.dart';
+import 'package:trustify_app/core/di/injection.dart';
 import 'package:trustify_app/core/theme/colors.dart';
 import 'package:trustify_app/core/theme/theme.dart';
+import 'package:trustify_app/features/verification/presentation/bloc/verification_bloc.dart';
 import 'package:trustify_app/features/verification/presentation/pages/verifier_page.dart';
 
 void main() {
-  runApp(const TrustifyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  initDependencies();
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider<VerificationBloc>(
+      create: (context) => serviceLocator(),
+    )
+  ], child: const TrustifyApp()));
 }
 
 class TrustifyApp extends StatelessWidget {
