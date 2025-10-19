@@ -1,5 +1,6 @@
 from reputability import linkCreditability
 from ddgs import DDGS
+from googleapiclient.discovery import build
 import json
 import numpy
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -46,7 +47,6 @@ def returnURLInfo(url):
         "description": newLink[0]["description"]
         }
         urlInfos.append(item)
-        print(item)
         summary = creditabilityScore.generateContentSummaries(url)
         summaries.append(summary)
     else:
