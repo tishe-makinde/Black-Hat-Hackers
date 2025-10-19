@@ -62,30 +62,13 @@ def returnURLInfo(url):
 similarLinks = []
 results = DDGS().text(userLinkTitle, max_results=15)
 for result in results:
-    similarLinks.append(result["href"])
+   similarLinks.append(result["href"]) 
 
-# Function to extract text from a webpage
-def extract_text(url):
-    try:
-        response = requests.get(url, timeout=5)
-        soup = BeautifulSoup(response.text, "html.parser")
-        text = soup.get_text(separator=" ", strip=True)
-        return text
-    except Exception:
-        return ""  # skip if fetch fails
-
-# Collect all page texts
-texts = [extract_text(userLink)]  # main link first
 for link in similarLinks:
     if "youtube" not in link:
         returnURLInfo(link)
 
-# Vectorize the texts
-vectorizer = TfidfVectorizer(stop_words="english", max_features=10000)
-tfidf_matrix = vectorizer.fit_transform(texts)
 
-# Compute cosine similarities
-similarities = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:]).flatten()
 
 scores = []
 
