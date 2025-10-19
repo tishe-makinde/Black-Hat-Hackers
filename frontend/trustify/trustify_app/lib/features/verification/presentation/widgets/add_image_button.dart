@@ -9,14 +9,14 @@ class AddImageButton extends StatefulWidget {
 }
 
 class _AddImageButtonState extends State<AddImageButton> {
+  final double _containerDimension = 180.0;
+  final BorderRadius _containerBorderRadius = BorderRadius.circular(8.0);
+  final BorderRadius _buttonBorderRadius = BorderRadius.circular(30.0);
   PlatformFile? _image;
 
   @override
   Widget build(BuildContext context) {
     final CupertinoThemeData theme = CupertinoTheme.of(context);
-    const double _containerDimension = 180.0;
-    final BorderRadius _containerBorderRadius = BorderRadius.circular(8.0);
-    final BorderRadius _buttonBorderRadius = BorderRadius.circular(30.0);
 
     return Container(
       width: _containerDimension,

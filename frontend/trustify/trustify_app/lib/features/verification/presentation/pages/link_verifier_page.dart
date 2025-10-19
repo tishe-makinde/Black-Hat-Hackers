@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trustify_app/core/theme/colors.dart';
+import 'package:trustify_app/features/verification/presentation/bloc/verification_bloc.dart';
 import 'package:trustify_app/features/verification/presentation/widgets/credibility_semantics.dart';
 import 'package:trustify_app/features/verification/presentation/widgets/how_to_use_section.dart';
 import 'package:trustify_app/features/verification/presentation/widgets/verify_button.dart';
@@ -44,7 +46,11 @@ class _LinkVerifierPageState extends State<LinkVerifierPage> {
           ),
           const SizedBox(height: 12.0),
           VerifyButton(
-            onPressed: () {},
+            onPressed: () {
+              context
+                  .read<VerificationBloc>()
+                  .add(VerificationLink(_linkController.text));
+            },
           ),
           const SizedBox(height: 20.0),
           HowToUseSection(
