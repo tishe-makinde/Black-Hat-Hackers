@@ -22,8 +22,13 @@ class _VerifierPageState extends State<VerifierPage> {
         leading: Row(
           children: [
             Image.asset('assets/images/verify_green.png'),
-            Text(AppConstants.appName,
-                style: theme.textTheme.navLargeTitleTextStyle),
+            Text(
+              AppConstants.appName,
+              style: theme.textTheme.textStyle.copyWith(
+                fontSize: 32.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
