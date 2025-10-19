@@ -10,7 +10,7 @@ class ExampleSpider(scrapy.Spider):
         "LOG_LEVEL": "ERROR",
         "RETRY_ENABLED": True,      # enable retries (default True)
         "RETRY_TIMES": 2,           # max number of retries for failed requests
-        "DOWNLOAD_TIMEOUT": 3,     # wait up to 10 seconds before timing out
+        "DOWNLOAD_TIMEOUT": 2,     # wait up to 10 seconds before timing out
         "CONCURRENT_REQUESTS": 2,   # optional: don’t hammer servers
     }
 
