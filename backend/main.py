@@ -80,8 +80,7 @@ class SourceVerification:
         print(f"Overall credibility: {overall:.3f}")
 
         # Return results for external use
-        return self.scores
-
+        return self.userSummary
 
     def calculateSimilarities(self, item, key):
         if item[key]:

@@ -31,10 +31,9 @@ class linkCreditability:
 
         client = genai.Client(api_key="AIzaSyDDr7H0NdM4PF4-JeHxIc-DLeQl1D27YwY")
         prompt = (
-            "Use two or three words to estimate the reputability of an article based on its content: "
+            "Write a 20 word summary on the reliability of "
             + stringContent
-            + f" and article's publisher: {publisher}. Give a score from 1 to 10 as well. Put all text in a dictionary format as so: "
-            + " {'reputation': value, 'score': value}"
+            + f" and article's publisher: {publisher}. Give a rating out of 10"
         )
         try:
             response = client.models.generate_content(
